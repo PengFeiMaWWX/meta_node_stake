@@ -1,0 +1,9 @@
+{
+  "network": "sepolia",
+  "upgrader": "0xDFD80050a12B0dfcF9D6dc9c30AE518644da0396",
+  "blockNumber": 9849235,
+  "timestamp": "2025-12-15T23:50:25.140Z",
+  "proxyAddress": "0xD955a8417AA2bd6857E7aEE34Ae910388a465617",
+  "newImplementation": "StakePoolV2",
+  "version": "2.0.0"
+}

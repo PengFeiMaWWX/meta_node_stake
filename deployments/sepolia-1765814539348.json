@@ -1,0 +1,41 @@
+{
+  "network": "sepolia",
+  "deployer": "0xDFD80050a12B0dfcF9D6dc9c30AE518644da0396",
+  "blockNumber": 9846904,
+  "timestamp": "2025-12-15T16:02:19.347Z",
+  "constract": {
+    "MetaNodeToken": {
+      "address": "0x56f22138657B5Cf551CdA2F789fD32aCE8E459e1",
+      "name": "MetaNode Token",
+      "symbol": "MMT"
+    },
+    "TestToken": {
+      "address": "0xa445A5c07d72fdF9c7Ac23d17C014B0Ba00F40e2",
+      "name": "Test Token",
+      "symbol": "TEST"
+    },
+    "StakePool": {
+      "address": "0xA55D2aa90B57619e5B0b8846E0B1D0a1045E4D91",
+      "metaNodePerBlock": "10.0",
+      "startBlock": "9847002",
+      "Pools": [
+        {
+          "id": 0,
+          "token": "ETH",
+          "address": "0x0000000000000000000000000000000000000000",
+          "weight": 100,
+          "minDeposit": "0.01",
+          "lockBlocks": 6500
+        },
+        {
+          "id": 1,
+          "token": "TEST",
+          "address": "0xa445A5c07d72fdF9c7Ac23d17C014B0Ba00F40e2",
+          "weight": 200,
+          "minDeposit": "100.0",
+          "lockBlocks": 13000
+        }
+      ]
+    }
+  }
+}

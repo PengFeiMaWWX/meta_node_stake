@@ -1,0 +1,647 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0xA55D2aa90B57619e5B0b8846E0B1D0a1045E4D91",
+      "txHash": "0xc8a3636d3ea85796b7ad2674daeb4503756c24a4987961a8064fd7cbb7a9de05",
+      "kind": "transparent"
+    },
+    {
+      "address": "0xD955a8417AA2bd6857E7aEE34Ae910388a465617",
+      "txHash": "0xaacdd4bd9c9eb7638ed77194e325f85c9a8df44e1431e2f3756c9c8d17b5ebbe",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "8f3685c481feada5867e655ec97b4c9df74d8ba912751c7ff45cc457072ad43b": {
+      "address": "0xFa340fdE760102795B03068A39A85d56c0C3253D",
+      "txHash": "0x1d322c69423ff10724d896f0532cda46fb5240b02f335c3c8bc4e397d06d62db",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)22_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool",
+            "contract": "Pausable",
+            "src": "@openzeppelin\\contracts\\utils\\Pausable.sol:18"
+          },
+          {
+            "label": "metaNodeToken",
+            "offset": 1,
+            "slot": "1",
+            "type": "t_contract(MetaNodeToken)2337",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:66"
+          },
+          {
+            "label": "metaNodePerBlock",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:71"
+          },
+          {
+            "label": "startBlock",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:74"
+          },
+          {
+            "label": "totalPoolWeight",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:75"
+          },
+          {
+            "label": "Pools",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Pool)2396_storage)dyn_storage",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:76"
+          },
+          {
+            "label": "users",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(User)2416_storage))",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:80"
+          },
+          {
+            "label": "stakePaused",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:84"
+          },
+          {
+            "label": "unstakePaused",
+            "offset": 1,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:85"
+          },
+          {
+            "label": "claimePaused",
+            "offset": 2,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:86"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)339_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Pool)2396_storage)dyn_storage": {
+            "label": "struct StakePool.Pool[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(UnstakeRequest)2402_storage)dyn_storage": {
+            "label": "struct StakePool.UnstakeRequest[]",
+            "numberOfBytes": "32"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(MetaNodeToken)2337": {
+            "label": "contract MetaNodeToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(User)2416_storage)": {
+            "label": "mapping(address => struct StakePool.User)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)22_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_struct(User)2416_storage))": {
+            "label": "mapping(uint256 => mapping(address => struct StakePool.User))",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Pool)2396_storage": {
+            "label": "struct StakePool.Pool",
+            "members": [
+              {
+                "label": "stTokenAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "poolWeight",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "latRewardBlock",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accMetaNodePerST",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "stTokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "minDepositAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "unstakeLockedBlocks",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "isActive",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_struct(RoleData)22_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(UnstakeRequest)2402_storage": {
+            "label": "struct StakePool.UnstakeRequest",
+            "members": [
+              {
+                "label": "unstakeLockedAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "unstakeLockedBlock",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(User)2416_storage": {
+            "label": "struct StakePool.User",
+            "members": [
+              {
+                "label": "stAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "finishedMetaNode",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "pendingMetaNode",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "requests",
+                "type": "t_array(t_struct(UnstakeRequest)2402_storage)dyn_storage",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "a5a71886430e9af40cefe394dbbdd8cd71ab9509cd78f7aab671d7ff1bef6aaf": {
+      "address": "0xA0ca221Cb29a77dDf5ddC5A9111A892D03f72440",
+      "txHash": "0x737d2555cd989316442809c8ddf1f9bbc10ee0a21b318ad9e13926b45322f686",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "_roles",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_bytes32,t_struct(RoleData)22_storage)",
+            "contract": "AccessControl",
+            "src": "@openzeppelin\\contracts\\access\\AccessControl.sol:55"
+          },
+          {
+            "label": "_paused",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool",
+            "contract": "Pausable",
+            "src": "@openzeppelin\\contracts\\utils\\Pausable.sol:18"
+          },
+          {
+            "label": "metaNodeToken",
+            "offset": 1,
+            "slot": "1",
+            "type": "t_contract(MetaNodeToken)2337",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:66"
+          },
+          {
+            "label": "metaNodePerBlock",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:71"
+          },
+          {
+            "label": "startBlock",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:74"
+          },
+          {
+            "label": "totalPoolWeight",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:75"
+          },
+          {
+            "label": "Pools",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_array(t_struct(Pool)2396_storage)dyn_storage",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:76"
+          },
+          {
+            "label": "users",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(User)2416_storage))",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:80"
+          },
+          {
+            "label": "stakePaused",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:84"
+          },
+          {
+            "label": "unstakePaused",
+            "offset": 1,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:85"
+          },
+          {
+            "label": "claimePaused",
+            "offset": 2,
+            "slot": "7",
+            "type": "t_bool",
+            "contract": "StakePool",
+            "src": "contracts\\StakePool.sol:86"
+          },
+          {
+            "label": "userTotalRewardsClaimed",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_mapping(t_address,t_uint256)",
+            "contract": "StakePoolV2",
+            "src": "contracts\\StakePoolV2.sol:7"
+          },
+          {
+            "label": "bonusMultiplier",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_uint256",
+            "contract": "StakePoolV2",
+            "src": "contracts\\StakePoolV2.sol:9"
+          }
+        ],
+        "types": {
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)339_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_struct(Pool)2396_storage)dyn_storage": {
+            "label": "struct StakePool.Pool[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(UnstakeRequest)2402_storage)dyn_storage": {
+            "label": "struct StakePool.UnstakeRequest[]",
+            "numberOfBytes": "32"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(MetaNodeToken)2337": {
+            "label": "contract MetaNodeToken",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_address,t_bool)": {
+            "label": "mapping(address => bool)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_struct(User)2416_storage)": {
+            "label": "mapping(address => struct StakePool.User)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_struct(RoleData)22_storage)": {
+            "label": "mapping(bytes32 => struct AccessControl.RoleData)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_mapping(t_address,t_struct(User)2416_storage))": {
+            "label": "mapping(uint256 => mapping(address => struct StakePool.User))",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Pool)2396_storage": {
+            "label": "struct StakePool.Pool",
+            "members": [
+              {
+                "label": "stTokenAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "poolWeight",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "latRewardBlock",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "accMetaNodePerST",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "stTokenAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "minDepositAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "unstakeLockedBlocks",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "isActive",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_struct(RoleData)22_storage": {
+            "label": "struct AccessControl.RoleData",
+            "members": [
+              {
+                "label": "hasRole",
+                "type": "t_mapping(t_address,t_bool)",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "adminRole",
+                "type": "t_bytes32",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(UnstakeRequest)2402_storage": {
+            "label": "struct StakePool.UnstakeRequest",
+            "members": [
+              {
+                "label": "unstakeLockedAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "unstakeLockedBlock",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_struct(User)2416_storage": {
+            "label": "struct StakePool.User",
+            "members": [
+              {
+                "label": "stAmount",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "finishedMetaNode",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "pendingMetaNode",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "requests",
+                "type": "t_array(t_struct(UnstakeRequest)2402_storage)dyn_storage",
+                "offset": 0,
+                "slot": "3"
+              }
+            ],
+            "numberOfBytes": "128"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

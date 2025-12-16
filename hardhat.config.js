@@ -1,0 +1,53 @@
+require("dotenv").config();
+require("@nomicfoundation/hardhat-toolbox");
+require('@openzeppelin/hardhat-upgrades');
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: {
+    version: "0.8.28",
+    settings:{
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+    },
+  },
+  networks:{
+     hardhat: {
+      chainId: 31337,
+    },
+   sepolia: {
+      url: process.env.SEPOLIA_RPC_URL || "",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 11155111,
+      timeout: 60000,
+    },
+  },
+  etherscan:{
+    apiKey: {
+      sepolia: process.env.ETHERSCAN_API_KEY || ""
+    }
+  },
+  gasReporter:{
+    enabled: process.env.REPORT_GAS ? true : false,
+    currency: "USD",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY
+  },
+  paths:{
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
+  },
+  mocha:{
+    timeout: 60000, // 60 seconds
+  },
+  solcover: {
+    skipFiles: ['migrations/'],
+    measureStatementCoverage: true,
+    measureFunctionCoverage: true,
+    measureBranchCoverage: true,
+    measureLineCoverage: true,
+  },
+};
