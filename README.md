@@ -111,7 +111,7 @@ cp .env.example .env
 ### 3. 编译合约
 
 ```bash
-npm run compile
+npx hardhat compile
 ```
 
 ### 4. 运行测试
