@@ -112,6 +112,10 @@ cp .env.example .env
 
 ```bash
 npx hardhat compile
+# 分析测试用例覆盖了多少智能合约代码，生成可视化报告
+npm install --save-dev solidity-coverage
+# 从 .env文件安全加载环境变量（如私钥、RPC URL）到 process.env供项目使用
+npm install --save-dev dotenv 
 ```
 
 ### 4. 运行测试
